@@ -3406,7 +3406,7 @@
         <path name="incall_music_uplink2" />
     </path>
 
-    <path name="incall_music_uplink2 speakgit push ssh://gerrit.odm.mioffice.cn:29418/platform/hardware/qcom/audio HEAD:refs/for/wt-r-veux-nativeer-and-display-port">
+    <path name="incall_music_uplink2 speakgit push ssh://gerrit.odm.mioffice.cn:29418/platform/hardware/qcom/audio HEAD:refs/for/wt-r-p780ae-nativeer-and-display-port">
         <path name="incall_music_uplink2" />
     </path>
 

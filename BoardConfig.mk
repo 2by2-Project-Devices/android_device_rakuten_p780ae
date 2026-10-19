@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/veux
+DEVICE_PATH := device/rakuten/p780ae
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
@@ -50,7 +50,7 @@ BOARD_USES_ALSA_AUDIO := true
 AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := veux
+TARGET_BOOTLOADER_BOARD_NAME := p780ae
 TARGET_NO_BOOTLOADER := true
 
 # Camera
@@ -68,7 +68,6 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
     $(DEVICE_PATH)/configs/vintf/device_framework_matrix.xml
 
 DEVICE_MANIFEST_FILE := \
@@ -93,7 +92,8 @@ BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_RAMDISK_USE_LZ4 := true
-BOARD_USES_GENERIC_KERNEL_IMAGE := true
+# BOARD_USES_GENERIC_KERNEL_IMAGE := true
+BOARD_USES_RECOVERY_AS_BOOT := true
 
 BOARD_KERNEL_CMDLINE := \
     console=ttyMSM0,115200n8 \
@@ -113,9 +113,18 @@ BOARD_KERNEL_CMDLINE := \
     ip6table_raw.raw_before_defrag=1 \
     firmware_class.path=/vendor/firmware
 
-TARGET_KERNEL_CONFIG := veux_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/veux
+TARGET_KERNEL_CONFIG := p780ae_defconfig
+TARGET_KERNEL_SOURCE := kernel/rakuten/p780ae
 TARGET_KERNEL_NO_GCC := true
+
+# Kill lineage kernel build task while preserving kernel
+TARGET_NO_KERNEL_OVERRIDE := true
+
+# Kernel - DTB/DTBO
+TARGET_FORCE_PREBUILT_KERNEL := true
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel
+BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)-kernel/dtb
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
 
 # Global LTO
 TARGET_GLOBAL_LTO := thin
@@ -123,7 +132,7 @@ TARGET_GLOBAL_OPTIMIZATION := O3
 TARGET_GLOBAL_THINLTO := true
 
 # OTA assert
-TARGET_OTA_ASSERT_DEVICE := peux|veux
+TARGET_OTA_ASSERT_DEVICE := P780|p780ae
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
@@ -133,9 +142,9 @@ BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_USES_METADATA_PARTITION := true
 
-BOARD_VEUX_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor
-BOARD_VEUX_DYNAMIC_PARTITIONS_SIZE := 9122611200 # BOARD_SUPER_PARTITION_SIZE - 4MB
-BOARD_SUPER_PARTITION_GROUPS := veux_dynamic_partitions
+BOARD_TINNO_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor
+BOARD_TINNO_DYNAMIC_PARTITIONS_SIZE := 9122611200 # BOARD_SUPER_PARTITION_SIZE - 4MB
+BOARD_SUPER_PARTITION_GROUPS := tinno_dynamic_partitions
 
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -165,7 +174,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
-BOARD_VENDOR := xiaomi
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/configs/properties/odm.prop
@@ -175,7 +183,6 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/properties/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
 
 # Recovery
-BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.default
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_F2FS := true
@@ -196,12 +203,34 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
+
+# Top-level vbmeta: matches both supplied P780 slots.
+BOARD_AVB_ALGORITHM := SHA256_RSA4096
+BOARD_AVB_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
+BOARD_AVB_ROLLBACK_INDEX := 0
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS := --flags 0
+
+# Chained vbmeta_system.
 BOARD_AVB_VBMETA_SYSTEM := product system system_ext
-BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA4096
-BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
-BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
+BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
+BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
+
+# Initial experiment: supplied slot B / build 264 / 2024-02-01 UTC.
+# This is NOT a measurement of the device's stored rollback index.
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := 1706745600
+BOARD_AVB_MAKE_VBMETA_SYSTEM_IMAGE_ARGS := --flags 0
+
+# Match the supplied hash/hash-tree algorithms.
+BOARD_AVB_BOOT_ADD_HASH_FOOTER_ARGS += --hash_algorithm sha256
+BOARD_AVB_DTBO_ADD_HASH_FOOTER_ARGS += --hash_algorithm sha256
+BOARD_AVB_VENDOR_BOOT_ADD_HASH_FOOTER_ARGS += --hash_algorithm sha256
+
+BOARD_AVB_SYSTEM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
+BOARD_AVB_SYSTEM_EXT_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
+BOARD_AVB_PRODUCT_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
+BOARD_AVB_VENDOR_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
+BOARD_AVB_ODM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 
 # WiFi
 BOARD_WLAN_DEVICE := qcwcn

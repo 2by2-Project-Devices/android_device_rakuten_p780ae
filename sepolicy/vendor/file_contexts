@@ -38,12 +38,12 @@
 /data/vendor/goodix(/.*)?                                                      u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor/silead(/.*)?                                                      u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor_de/[0-9]+/goodix(/.*)?                                            u:object_r:fingerprint_vendor_data_file:s0
-/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.rakuten u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/vendor\.silead\.hardware\.fingerprintext@1\.0-service           u:object_r:hal_fingerprint_default_exec:s0
 
 # IR
 /dev/lirc[0-9]+                                                                u:object_r:lirc_device:s0 
-/vendor/bin/hw/android\.hardware\.ir-service\.xiaomi                           u:object_r:hal_ir_default_exec:s0
+/vendor/bin/hw/android\.hardware\.ir-service\.rakuten                           u:object_r:hal_ir_default_exec:s0
 
 # Mlipay
 /(vendor|system/vendor)/bin/mlipayd@1.1                                        u:object_r:hal_mlipay_default_exec:s0
@@ -52,7 +52,7 @@
 /dev/pn553                                                                     u:object_r:nfc_device:s0
 
 # Sensors
-/vendor/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal             u:object_r:hal_sensors_default_exec:s0
+/vendor/bin/hw/android\.hardware\.sensors-service\.rakuten-multihal             u:object_r:hal_sensors_default_exec:s0
 
 # Thermal
 /data/vendor/thermal(/.*)?                                                     u:object_r:thermal_data_file:s0

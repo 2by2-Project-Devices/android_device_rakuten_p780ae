@@ -1,16 +1,16 @@
 # Fingerprint
-com.fingerprints.extension::IFingerprintEngineering                           u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
-com.fingerprints.extension::IFingerprintNavigation                            u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
-com.fingerprints.extension::IFingerprintSensorTest                            u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
-vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon       u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
-vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemonExt    u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
-vendor.silead.hardware.fingerprintext::ISileadFingerprint                     u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
+com.fingerprints.extension::IFingerprintEngineering                           u:object_r:vendor_hal_fingerprint_hwservice_rakuten:s0
+com.fingerprints.extension::IFingerprintNavigation                            u:object_r:vendor_hal_fingerprint_hwservice_rakuten:s0
+com.fingerprints.extension::IFingerprintSensorTest                            u:object_r:vendor_hal_fingerprint_hwservice_rakuten:s0
+vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon       u:object_r:vendor_hal_fingerprint_hwservice_rakuten:s0
+vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemonExt    u:object_r:vendor_hal_fingerprint_hwservice_rakuten:s0
+vendor.silead.hardware.fingerprintext::ISileadFingerprint                     u:object_r:vendor_hal_fingerprint_hwservice_rakuten:s0
 
 # Google WirelessCharger
 vendor.google.wireless_charger::IWirelessCharger                                                    u:object_r:hal_wlc_hwservice:s0
 
 # Mlipay
-vendor.xiaomi.hardware.mlipay::IMlipayService                                 u:object_r:hal_mlipay_hwservice:s0
+vendor.rakuten.hardware.mlipay::IMlipayService                                 u:object_r:hal_mlipay_hwservice:s0
 
 # Rilnv
 vendor.qti.hardware.radio.qcriNvOpt::IqcriNvOpt	                              u:object_r:hal_rilnv_hwservice:s0

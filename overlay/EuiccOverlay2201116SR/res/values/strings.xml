@@ -6,7 +6,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="sim_slot_mappings_json">
         {\"sim-slot-mappings\": [{
-            \"devices\": [\"veux\"],
+            \"devices\": [\"p780ae\"],
             \"esim-slot-ids\": [1],
             \"psim-slot-ids\": [0]
         }]}

@@ -1,4 +1,4 @@
-# Device Tree for POCO X4 Pro 5G/Redmi Note 11E Pro/Redmi Note 11 Pro 5G/Redmi Note 11 Pro+ 5G (peux/veux)
+# Device Tree for POCO X4 Pro 5G/Redmi Note 11E Pro/Redmi Note 11 Pro 5G/Redmi Note 11 Pro+ 5G (peux/p780ae)
 
 ## Spec Sheet
 

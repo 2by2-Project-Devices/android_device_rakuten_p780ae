@@ -5,5 +5,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/veux.mk
+    $(LOCAL_DIR)/lineage_p780ae.mk
 

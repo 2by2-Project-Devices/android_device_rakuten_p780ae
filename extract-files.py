@@ -15,10 +15,9 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/xiaomi/veux',
+    'device/rakuten/p780ae',
     'hardware/qcom-caf/sm8350',
     'hardware/qcom-caf/wlan',
-    'hardware/xiaomi',
     'vendor/qcom/opensource/commonsys/display',
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/dataservices',
@@ -64,8 +63,8 @@ blob_fixups: blob_fixups_user_type = {
 
 
 module = ExtractUtilsModule(
-    'veux',
-    'xiaomi',
+    'p780ae',
+    'rakuten',
     blob_fixups=blob_fixups,
     namespace_imports=namespace_imports,
 )

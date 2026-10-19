@@ -175,14 +175,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.xiaomi
-
-PRODUCT_PACKAGES += \
-    com.fingerprints.extension@1.0.vendor \
-    libvendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
-
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
@@ -224,10 +216,6 @@ PRODUCT_PACKAGES += \
 # Hotword enrollment
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
-
-# IFAA manager
-PRODUCT_PACKAGES += \
-     IFAAService
 
 # INIT
 PRODUCT_PACKAGES += \
@@ -287,11 +275,6 @@ PRODUCT_PACKAGES += \
 # Neural networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
-
-# Mlipay
-PRODUCT_PACKAGES += \
-    vendor.xiaomi.hardware.mlipay@1.1.vendor \
-    vendor.xiaomi.hardware.mtdservice@1.0.vendor
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -476,9 +459,6 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors-service.xiaomi-multihal
-
-PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0 \
     android.frameworks.sensorservice@1.0.vendor
 
@@ -492,18 +472,10 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
-    hardware/xiaomi \
     vendor/qcom/opensource/usb/etc
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := everything
-
-# Telephony
-PRODUCT_PACKAGES += \
-    xiaomi-telephony-stub
-
-PRODUCT_BOOT_JARS += \
-    xiaomi-telephony-stub
 
 # Thermal
 PRODUCT_PACKAGES += \
@@ -554,11 +526,8 @@ PRODUCT_PACKAGES += \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
 # Inherit from proprietary targets
-$(call inherit-product, vendor/xiaomi/veux/veux-vendor.mk)
+#$(call inherit-product, vendor/rakuten/p780ae/p780ae-vendor.mk)
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
     RemovePackagesVeux
-
-# Dolby
-$(call inherit-product, vendor/sony/dolby/setup.mk)

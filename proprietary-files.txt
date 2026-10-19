@@ -1,6 +1,6 @@
 # All unpinned blobs below are extracted from V816.0.12.0.TKCMIXM (VEUXGlobal)
-# veux_cn: V14.0.5.0.TKCCNXM (VEUX)
-# veux_jp: V14.0.4.0.TKCJPXM (VEUX)
+# p780ae_cn: V14.0.5.0.TKCCNXM (VEUX)
+# p780ae_jp: V14.0.4.0.TKCJPXM (VEUX)
 
 # ACDB
 vendor/etc/acdbdata/QRD/global/aw882xx/QRD_global_aw882xx_Bluetooth_cal.acdb
@@ -102,7 +102,7 @@ vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # Audio
-vendor/lib/hw/audio.primary.holi.so:vendor/lib/hw/audio.primary.veux.so;DISABLE_CHECKELF;FIX_SONAME
+vendor/lib/hw/audio.primary.holi.so:vendor/lib/hw/audio.primary.p780ae.so;DISABLE_CHECKELF;FIX_SONAME
 vendor/lib/libadm.so
 vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudioconfigstore.so
@@ -251,34 +251,34 @@ vendor/lib64/camera/com.qti.sensor.s5k4h7.so
 vendor/lib64/camera/com.qti.sensor.s5k5e9yu05.so
 vendor/lib64/camera/com.qti.sensor.s5k5e9yx04.so
 vendor/lib64/camera/com.qti.sensor.s5kjd1sp.so
-vendor/lib64/camera/com.qti.sensor.veux_aac_gc02m1_macro.so
-vendor/lib64/camera/com.qti.sensor.veux_aac_imx355_ultra.so
-vendor/lib64/camera/com.qti.sensor.veux_aac_ov16a1q_front.so
-vendor/lib64/camera/com.qti.sensor.veux_aac_s5khm2_main.so
-vendor/lib64/camera/com.qti.sensor.veux_ofilm_gc02m1_macro.so
-vendor/lib64/camera/com.qti.sensor.veux_ofilm_s5kgw3_main.so
-vendor/lib64/camera/com.qti.sensor.veux_qtech_imx355_ultra.so
-vendor/lib64/camera/com.qti.sensor.veux_sunny_ov16a1q_front.so
-vendor/lib64/camera/com.qti.sensor.veux_sunny_s5khm2_main.so
-vendor/lib64/camera/com.qti.sensormodule.veux_aac_gc02m1.bin
-vendor/lib64/camera/com.qti.sensormodule.veux_aac_imx355.bin
-vendor/lib64/camera/com.qti.sensormodule.veux_aac_ov16a1q.bin
-vendor/lib64/camera/com.qti.sensormodule.veux_aac_s5khm2.bin
-vendor/lib64/camera/com.qti.sensormodule.veux_ofilm_gc02m1.bin
-vendor/lib64/camera/com.qti.sensormodule.veux_ofilm_s5kgw3.bin
-vendor/lib64/camera/com.qti.sensormodule.veux_qtech_imx355.bin
-vendor/lib64/camera/com.qti.sensormodule.veux_sunny_ov16a1q.bin
-vendor/lib64/camera/com.qti.sensormodule.veux_sunny_s5khm2.bin
+vendor/lib64/camera/com.qti.sensor.p780ae_aac_gc02m1_macro.so
+vendor/lib64/camera/com.qti.sensor.p780ae_aac_imx355_ultra.so
+vendor/lib64/camera/com.qti.sensor.p780ae_aac_ov16a1q_front.so
+vendor/lib64/camera/com.qti.sensor.p780ae_aac_s5khm2_main.so
+vendor/lib64/camera/com.qti.sensor.p780ae_ofilm_gc02m1_macro.so
+vendor/lib64/camera/com.qti.sensor.p780ae_ofilm_s5kgw3_main.so
+vendor/lib64/camera/com.qti.sensor.p780ae_qtech_imx355_ultra.so
+vendor/lib64/camera/com.qti.sensor.p780ae_sunny_ov16a1q_front.so
+vendor/lib64/camera/com.qti.sensor.p780ae_sunny_s5khm2_main.so
+vendor/lib64/camera/com.qti.sensormodule.p780ae_aac_gc02m1.bin
+vendor/lib64/camera/com.qti.sensormodule.p780ae_aac_imx355.bin
+vendor/lib64/camera/com.qti.sensormodule.p780ae_aac_ov16a1q.bin
+vendor/lib64/camera/com.qti.sensormodule.p780ae_aac_s5khm2.bin
+vendor/lib64/camera/com.qti.sensormodule.p780ae_ofilm_gc02m1.bin
+vendor/lib64/camera/com.qti.sensormodule.p780ae_ofilm_s5kgw3.bin
+vendor/lib64/camera/com.qti.sensormodule.p780ae_qtech_imx355.bin
+vendor/lib64/camera/com.qti.sensormodule.p780ae_sunny_ov16a1q.bin
+vendor/lib64/camera/com.qti.sensormodule.p780ae_sunny_s5khm2.bin
 vendor/lib64/camera/com.qti.tuned.default.bin
-vendor/lib64/camera/com.qti.tuned.veux_aac_gc02m1.bin
-vendor/lib64/camera/com.qti.tuned.veux_aac_imx355.bin
-vendor/lib64/camera/com.qti.tuned.veux_aac_ov16a1q.bin
-vendor/lib64/camera/com.qti.tuned.veux_aac_s5khm2.bin
-vendor/lib64/camera/com.qti.tuned.veux_ofilm_gc02m1.bin
-vendor/lib64/camera/com.qti.tuned.veux_ofilm_s5kgw3.bin
-vendor/lib64/camera/com.qti.tuned.veux_qtech_imx355.bin
-vendor/lib64/camera/com.qti.tuned.veux_sunny_ov16a1q.bin
-vendor/lib64/camera/com.qti.tuned.veux_sunny_s5khm2.bin
+vendor/lib64/camera/com.qti.tuned.p780ae_aac_gc02m1.bin
+vendor/lib64/camera/com.qti.tuned.p780ae_aac_imx355.bin
+vendor/lib64/camera/com.qti.tuned.p780ae_aac_ov16a1q.bin
+vendor/lib64/camera/com.qti.tuned.p780ae_aac_s5khm2.bin
+vendor/lib64/camera/com.qti.tuned.p780ae_ofilm_gc02m1.bin
+vendor/lib64/camera/com.qti.tuned.p780ae_ofilm_s5kgw3.bin
+vendor/lib64/camera/com.qti.tuned.p780ae_qtech_imx355.bin
+vendor/lib64/camera/com.qti.tuned.p780ae_sunny_ov16a1q.bin
+vendor/lib64/camera/com.qti.tuned.p780ae_sunny_s5khm2.bin
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/com.qti.chiusecaseselector.so
@@ -424,9 +424,9 @@ vendor/etc/camera/125_Latin.png
 vendor/etc/camera/126_Fantasy.png
 vendor/etc/camera/127_DustDream.png
 vendor/etc/camera/128_MongKok.png
-vendor/etc/camera/com.xiaomi.dcal.wu.golden_i
-vendor/etc/camera/com.xiaomi.dcal.wu.golden_ii
-vendor/etc/camera/com.xiaomi.dcal.wu.golden_in_i
+vendor/etc/camera/com.rakuten.dcal.wu.golden_i
+vendor/etc/camera/com.rakuten.dcal.wu.golden_ii
+vendor/etc/camera/com.rakuten.dcal.wu.golden_in_i
 vendor/etc/camera/dof_mecp.bin
 vendor/etc/camera/intsense_config_undistort.bin
 vendor/etc/camera/morpho_lowlight_2.0_India_aac_gc02m1_macro_ii.xml
@@ -589,7 +589,7 @@ vendor/bin/qdcmss
 vendor/etc/init/qdcmss.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/etc/SVIConfig.xml
-vendor/etc/qdcm_calib_data_xiaomi_k6s_38_0c_0a_fhd_dsc_video_dsi_panel.xml
+vendor/etc/qdcm_calib_data_rakuten_k6s_38_0c_0a_fhd_dsc_video_dsi_panel.xml
 vendor/lib64/libdisp-aba.so
 vendor/lib64/libqdcm-mode-parser.so
 vendor/lib64/libsnapdragoncolor-manager.so
@@ -660,16 +660,16 @@ vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
-# eUICC - from veux_jp
+# eUICC - from p780ae_jp
 product/priv-app/EuiccGoogle/EuiccGoogle.apk|2d238bfe14473b8f578bf0d4ea61246f61d0f618
 
-# Embedded Secure Element power manager - from veux_cn
+# Embedded Secure Element power manager - from p780ae_cn
 vendor/bin/hw/vendor.qti.esepowermanager@1.1-service|0427ec8683d9737faa00d3fcb9e19b660a26c298
 vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so|5560bfccdc7ea51ed6f3ae032573122ef113c619
 vendor/lib64/vendor.qti.esepowermanager@1.0.so|8716f793f12ac3d3a5444ddaa056d6150af084be
 vendor/lib64/vendor.qti.esepowermanager@1.1.so|759973ec41a5a9d0f0c4bc941a4e513704ecfc2c
 
-# Felica - from veux_jp
+# Felica - from p780ae_jp
 product/app/MobileFeliCaClient/MobileFeliCaClient.apk;PRESIGNED|3ca65781ce1e89d88a169ab5885f04d6b331e14a
 vendor/etc/felica/common.cfg|ca6ccc74d3e115f4f522d670f64ce7d389b18741
 vendor/etc/felica/mfm.cfg|4c373c800a0a09f678b0f09fb9a3226121f02921
@@ -1048,16 +1048,16 @@ vendor/lib/libqcodec2_v4l2codec.so
 
 # Mlipay
 vendor/bin/mlipayd@1.1
-vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
-vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
+vendor/etc/init/vendor.rakuten.hardware.mlipay@1.1-service.rc
+vendor/etc/vintf/manifest/manifest_vendor.rakuten.hardware.mlipay.xml
 vendor/lib64/libmlipay.so
 vendor/lib64/libmlipay@1.1.so
 
 # NFC
-vendor/etc/init/init.veux.nfc.rc
+vendor/etc/init/init.p780ae.nfc.rc
 vendor/lib64/libpn557_fw.so
 
-# NFC - from veux_cn
+# NFC - from p780ae_cn
 vendor/lib/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so|2bc1887b71b4557b75e26465f6917525bfd43e4a
 
 # Neural Networks
@@ -1237,7 +1237,7 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 
-# Secure element - from veux_cn
+# Secure element - from p780ae_cn
 vendor/bin/hw/vendor.qti.secure_element@1.2-service|7843771977282db89a3bbd1160fe35bcce901127
 vendor/lib64/android.hardware.secure_element@1.0-impl.so|a7d75c55306bc5d5afa048dda66a6fa9be19542e
 vendor/lib64/jcos_nq_client.so|22db02f4bcc6e1932ca2a29bc7ee837889e07b02
@@ -1310,12 +1310,12 @@ vendor/etc/sensors/config/sns_wrist_pedo.json
 vendor/etc/sensors/config/strait_default_sensors.json
 vendor/etc/sensors/config/strait_dynamic_sensors.json
 vendor/etc/sensors/config/strait_power_0.json
-vendor/etc/sensors/config/veux_qrd_ak991x.json
-vendor/etc/sensors/config/veux_qrd_bu27030.json
-vendor/etc/sensors/config/veux_qrd_icm4x6xx.json
-vendor/etc/sensors/config/veux_qrd_lsm6dso_0.json
-vendor/etc/sensors/config/veux_qrd_qmc6308.json
-vendor/etc/sensors/config/veux_qrd_sx933x.json
+vendor/etc/sensors/config/p780ae_qrd_ak991x.json
+vendor/etc/sensors/config/p780ae_qrd_bu27030.json
+vendor/etc/sensors/config/p780ae_qrd_icm4x6xx.json
+vendor/etc/sensors/config/p780ae_qrd_lsm6dso_0.json
+vendor/etc/sensors/config/p780ae_qrd_qmc6308.json
+vendor/etc/sensors/config/p780ae_qrd_sx933x.json
 vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
 vendor/etc/elliptic_sensor.xml
